@@ -1,0 +1,108 @@
+/* Container for the entire authentication page */
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa; /* Light background color */
+    padding: 1rem;
+  }
+  
+  /* Title styling */
+  .title {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Card container for the login/register form */
+  .auth-card {
+    background-color: #ffffff; /* White background */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 30%;
+  }
+  
+  /* Navigation tabs styling */
+  .nav-tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+    padding: 0;
+    list-style: none;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  /* Individual tab item */
+  .nav-item {
+    cursor: pointer;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    color: #007bff; /* Primary color */
+    text-decoration: none;
+  }
+  
+  /* Active tab styling */
+  .nav-item.active .nav-link {
+    color: #495057;
+    border-bottom: 2px solid #007bff;
+  }
+  
+  /* Tab content container */
+  .tab-content {
+    min-height: 200px;
+  }
+  
+  .tab-pane {
+    display: none;
+  }
+  
+  .tab-pane.active {
+    display: block;
+  }
+  
+  /* Mobile responsiveness */
+  @media (max-width: 768px) {
+    .auth-card {
+      padding: 1rem;
+    }
+  
+    .nav-tabs {
+      flex-direction: row; /* Keep tabs side by side */
+      justify-content: space-between; /* Ensure they are spaced out evenly */
+    }
+  
+    .nav-link {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .nav-link {
+      padding: 0.3rem 0.5rem;
+      font-size: 0.875rem; /* Decrease font size for smaller screens */
+    }
+  
+    .auth-card {
+      padding: 1rem;
+      max-width: 70%;
+    }
+  
+    .input-box {
+      font-size: 0.8rem; /* Adjust font size for input boxes */
+      padding: 0.3rem; /* Adjust padding for input boxes */
+    }
+  }
+  
