@@ -17,7 +17,7 @@ const LoginComp = () => {
     setLoading(true);
 
     try {
-      const { data } = await axios.post("http://localhost:3000/users/login", {
+      const { data } = await axios.post("https://mern-deployment-api.vercel.app/users/login", {
         identifier: identifier,
         password: password,
       });
