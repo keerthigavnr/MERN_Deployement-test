@@ -20,7 +20,7 @@ dotenv.config();
 app.use(express.json())
 app.use(
   cors({
-    origin: "https://mern-deployement-frontend.vercel.app/",
+    origin: "https://mern-deployement-frontend.vercel.app",
     credentials: true,
   })
 );
