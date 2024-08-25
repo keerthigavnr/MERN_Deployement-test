@@ -20,7 +20,7 @@ dotenv.config();
 app.use(express.json())
 app.use(
   cors({
-    origin: "http://localhost:5173",
+    origin: "https://mern-deployement-frontend.vercel.app",
     credentials: true,
   })
 );
@@ -633,8 +633,8 @@ mongoose
   .then(() => {
     console.log("App connected to database");
 
-    app.listen(3000, () => {
-      console.log(`App is listening to port: 3003`);
+    app.listen(3003, () => {
+      console.log(`App is listening to port: 3000`);
     });
   })
   .catch((error) => {

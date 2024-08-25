@@ -12,6 +12,7 @@ const RegisterComp = () => {
   const [success, setSuccess] = useState(false);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+axios.defaults.withCredentials = true;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ const RegisterComp = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post("http://localhost:3000/users", {
+      const response = await axios.post("https://mern-deployment-api.vercel.app/users", {
         username: name,
         facultyID: facultyID,
         email: email,

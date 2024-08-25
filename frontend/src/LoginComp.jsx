@@ -9,6 +9,7 @@ const LoginComp = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  axios.defaults.withCredentials = true;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -17,7 +18,7 @@ const LoginComp = () => {
     setLoading(true);
 
     try {
-      const { data } = await axios.post("http://localhost:3000/users/login", {
+      const { data } = await axios.post("https://mern-deployment-api.vercel.app/users/login", {
         identifier: identifier,
         password: password,
       });
